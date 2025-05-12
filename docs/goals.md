@@ -25,3 +25,23 @@ ddf: driver discover frontend ui
 4. @ddf : Drivers contact interaction
 
 5. @dds : unit tests
+
+
+### work breakdown: dds
+
+- [x] implement validation for get applicants api
+- [x] implement contact-one api 
+- [ ] add test case for validation of get applicants
+- [ ] integrate with mock api for applicants from CA
+- [ ] implement filters over the response of applicants response
+- [ ] add test case for filter logic
+- [ ] 
+
+
+### work breakdown: ddf
+- [ ] implement basic Ui for viewing applicants
+- [ ] implement filters UI
+- [ ] integrate with get-applicants API to view
+- [ ] connect with filters from ui
+- [ ] implement contact-one button
+- [ ] 
