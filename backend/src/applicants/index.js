@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fetchDataAndFilterSvc = require('./fetchDataAndFilterSvc');
 const { validationsDe, FormMappers } = require('./constants');
+const { validateAndGet } = require('./validators');
 
 /* 
     route 'applicants/' : get all applicants with filters
@@ -60,18 +61,4 @@ router.post('/:id/contact', (req, res) => {
 });
 
 module.exports = router;
-
-function validateAndGet(query, field, validOptions) {
-    if (!query[field]) {
-        return { isPresent: false, isValid: false };
-    }
-    const rawValue = query[field];
-    const value = typeof rawValue === 'string' ? rawValue.trim() : '';
-    let isValid = false;
-    if (validOptions && validOptions.includes(value)) {
-        isValid = true;
-    }
-    // todo: handle case where valid options arent defined
-    return { value, isPresent: true, isValid, validOptions };
-}
 

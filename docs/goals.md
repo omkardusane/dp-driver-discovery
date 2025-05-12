@@ -31,10 +31,10 @@ ddf: driver discover frontend ui
 
 - [x] implement validation for get applicants api
 - [x] implement contact-one api 
-- [ ] add test case for validation of get applicants
+- [x] add test case for validation of get applicants
 - [ ] integrate with mock api for applicants from CA
 - [ ] implement filters over the response of applicants response
-- [ ] add test case for filter logic
+- [ ] add test case for the filtering logic
 - [ ] 
 
 
