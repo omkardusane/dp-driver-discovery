@@ -2,3 +2,4 @@ what count unit day time
 log 20 min 1 1120
 log 40 min 1 1540  
 log 45 min 1 1700 
+log 40 min 1 1820
