@@ -1,4 +1,2 @@
-console.log('tbd...')
-setTimeout(() => {
-    console.log('Exiting')
-}, 3000);
+let startApp = require('./src/app.js')
+startApp();
