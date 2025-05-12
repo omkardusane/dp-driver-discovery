@@ -1,9 +1,13 @@
+const mockData = require('../../../docs/seed/mock-applicants-2.json')
 module.exports = function (filters, { offset, limit }) {
-    // Dummy data
-    const data = [
-        { id: 1, name: "Alice Wonderland", status: "applied" },
-        { id: 2, name: "Bob Builder", status: "interviewing" },
-        { id: 3, name: "Chris Brown", status: "rejected" }
-    ];
-    return data;
+    /* 
+    todo: 
+     - stream data from the ca-api
+     - parse string chunks into JSON and emit
+     - implement filters
+     - maybe implement pagination limit
+     - maybe impl pagination offset
+     - return the list
+    */
+    return mockData;
 };

@@ -1,0 +1,212 @@
+[
+    {
+        "ID": 3,
+        "Name": "Clara Neumann",
+        "Email": "clara.neumann@example.com",
+        "Phone": "+4915334567892",
+        "PostalCode": "50667",
+        "IsTalent": true,
+        "IsHired": true,
+        "Success": true,
+        "FunnelID": "3",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Vollzeit",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Grundlegend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Keine Englischkenntnisse",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    },
+    {
+        "ID": 4,
+        "Name": "David Schulz",
+        "Email": "david.schulz@example.com",
+        "Phone": "+4915445678903",
+        "PostalCode": "80331",
+        "IsTalent": true,
+        "IsHired": false,
+        "Success": true,
+        "FunnelID": "1",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Vollzeit",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Grundlegend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Keine Englischkenntnisse",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    },
+    {
+        "ID": 6,
+        "Name": "Felix Meier",
+        "Email": "felix.meier@example.com",
+        "Phone": "+4915667890125",
+        "PostalCode": "01067",
+        "IsTalent": true,
+        "IsHired": false,
+        "Success": false,
+        "FunnelID": "2",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Vollzeit",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Grundlegend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Keine Englischkenntnisse",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    }
+]
