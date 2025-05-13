@@ -47,6 +47,12 @@ General
 
 
 Screenshots:
+
+Applicants list
 ![applicants list](./work/ss1.PNG) 
+
+filters
 ![applicants filters](./work/ss2.PNG)
+
+one of the filters
 ![filters one dropdown](./work/ss3.PNG) 

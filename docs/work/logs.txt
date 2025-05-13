@@ -7,5 +7,6 @@ log 40 min 1 1820
 log 30 min 2 1630
 log 30 min 2 1700
 log 60 min 2 1800
--- 2 hr
-log  min 2 
+-- +2 hr
+log 140 min 2 2020
+-- 7 hr
