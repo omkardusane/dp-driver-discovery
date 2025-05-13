@@ -5,14 +5,21 @@ const API_BASE_URL = 'http://localhost:3000';
 export const fetchApplicants = async (page = 1) => {
     try {
         const response = await axios.get(`${API_BASE_URL}/applicants`, {
-            params: { deu: 'Grundlegend' },
+            params: {
+                // deu: 'Grundlegend',
+                // eng: 'Keine Englischkenntnisse',
+
+                // for testing with empty response without validation err
+                // deu: 'Fließend',
+                // eng: 'Fluent',
+                // dl: "B"
+                // dl: "CE"
+            },
         });
         return response.data.map(e => {
             return {
-                id: e.ID,
-                name: e.Name,
-                email: e.Email,
-                workmode: extractField(e.FormInfo, 'Arbeitsmodell'),
+                ...e,
+                ...e.attributes
             };
         });
     } catch (error) {
@@ -30,12 +37,4 @@ export const contactOneApplicant = async (applicantId) => {
         console.error('Error contacting applicant:', error);
         return false
     }
-}
-
-function extractField(array, field) {
-    for (let item of array) {
-        if (item.question == field)
-            return item.answers;
-    }
-    return "-"
 }

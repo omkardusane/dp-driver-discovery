@@ -12,6 +12,9 @@ export default () => {
 
     const headers = [
         { key: 'name', label: 'Applicant Name' },
+        { key: 'deu', label: 'Deutsche Sprache' },
+        { key: 'eng', label: 'English Language' },
+        { key: 'dl', label: 'Drivers License' },
         { key: 'workmode', label: 'Arbeitsmodell (work Mode)' },
     ]
     useEffect(() => {
@@ -31,7 +34,6 @@ export default () => {
     if (loading) return <p>Loading...</p>;
 
     const handleAction = async (row) => {
-        //console.log('clciked')
         try {
             let contactSuccess = await contactOneApplicant(row.id);
             if (contactSuccess) {
@@ -43,17 +45,16 @@ export default () => {
             setToastMessage('Contact did not go through')
             console.error('Here we would like to create a UI toast inform user of any error', ContactErr)
         }
-
     }
 
     return (
         <div className="container mx-auto py-8">
-            <h1 className="text-3xl font-bold mb-4 ml-2 text-gray-800 font-mono">Applicants List</h1>
+            <h1 className="text-3xl font-bold mb-4 ml-2 text-gray-800 font-mono">Applicants List {loading ? "true" : "false"}</h1>
             <div className="overflow-x-auto ml-4 mr-4 ">
                 <GeneralTable headers={headers} data={applicants} onAction={handleAction} actionLabel="Contact" />
             </div>
             <GeneralToast message={toastMessage} onClose={() => setToastMessage(null)} />
-        </div>
+        </div >
     );
 }
 

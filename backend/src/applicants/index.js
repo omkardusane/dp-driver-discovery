@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fetchDataAndFilterSvc = require('./fetchDataAndFilterSvc');
-const { validationsDe, FormMappers } = require('./constants');
+const { validationsDe, FormMappers, validationsEn } = require('./constants');
 const { validateAndGet } = require('./validators');
 
 /* 
@@ -12,7 +12,7 @@ const { validateAndGet } = require('./validators');
         eng: knowledge fo english : Englisch
         exp: experienc in years : Erfahrung
 */
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     let filters = {}
     let filterErrors = [];
     for (let field in validationsDe) {
@@ -36,7 +36,8 @@ router.get('/', (req, res) => {
     const offset = parseInt(req.query.offset, 10) || 0;
     const limit = parseInt(req.query.limit, 10) || 10;
     const pagination = { offset, limit };
-    let data = fetchDataAndFilterSvc(filters, pagination);
+    console.log("filters", filters);
+    let data = await fetchDataAndFilterSvc(filters, pagination);
     // res.setHeader('Content-Type', 'application/json');
     res.status(200).json(data)
 });
@@ -59,6 +60,15 @@ router.post('/:id/contact', (req, res) => {
         timestamp: new Date()
     });
 });
+
+/* Helper route for providing choices in filters */
+router.get('/filter-options', (req, res) => {
+    res.status(200).json({
+        enOptions: validationsEn,
+        deOptions: validationsDe,
+        formMappers: FormMappers
+    })
+})
 
 module.exports = router;
 

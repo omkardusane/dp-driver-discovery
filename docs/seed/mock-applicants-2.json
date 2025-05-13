@@ -1,6 +1,6 @@
 [
     {
-        "ID": 3,
+        "ID": 4745,
         "Name": "Clara Neumann",
         "Email": "clara.neumann@example.com",
         "Phone": "+4915334567892",
@@ -70,7 +70,7 @@
         "UpdatedAt": "2025-05-05T13:40:07.558845Z"
     },
     {
-        "ID": 4,
+        "ID": 4233,
         "Name": "David Schulz",
         "Email": "david.schulz@example.com",
         "Phone": "+4915445678903",
@@ -79,6 +79,76 @@
         "IsHired": false,
         "Success": true,
         "FunnelID": "1",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "CE",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Vollzeit",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Grundlegend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Keine Englischkenntnisse",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    },
+    {
+        "ID": 42306,
+        "Name": "Felix Meier",
+        "Email": "felix.meier@example.com",
+        "Phone": "+4915667890125",
+        "PostalCode": "01067",
+        "IsTalent": true,
+        "IsHired": false,
+        "Success": false,
+        "FunnelID": "2",
         "FormInfo": [
             {
                 "result": "Incorrect",
@@ -140,24 +210,24 @@
         "UpdatedAt": "2025-05-05T13:40:07.558845Z"
     },
     {
-        "ID": 6,
-        "Name": "Felix Meier",
-        "Email": "felix.meier@example.com",
-        "Phone": "+4915667890125",
-        "PostalCode": "01067",
+        "ID": 3145,
+        "Name": "Clara Neumann",
+        "Email": "clara.neumann@example.com",
+        "Phone": "+4915334567892",
+        "PostalCode": "50667",
         "IsTalent": true,
-        "IsHired": false,
-        "Success": false,
-        "FunnelID": "2",
+        "IsHired": true,
+        "Success": true,
+        "FunnelID": "3",
         "FormInfo": [
             {
                 "result": "Incorrect",
-                "answers": "",
+                "answers": "C1E",
                 "question": "Führerschein"
             },
             {
                 "result": "Incorrect",
-                "answers": "Vollzeit",
+                "answers": "Teilzeit (20h)",
                 "question": "Arbeitsmodell"
             },
             {
@@ -188,6 +258,146 @@
             {
                 "result": "Incorrect",
                 "answers": "Keine Englischkenntnisse",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    },
+    {
+        "ID": 41123,
+        "Name": "Ross Schulz",
+        "Email": "david.schulz@example.com",
+        "Phone": "+4915445678903",
+        "PostalCode": "80331",
+        "IsTalent": true,
+        "IsHired": false,
+        "Success": true,
+        "FunnelID": "1",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "CE",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Vollzeit",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Fließend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Basic",
+                "question": "Englisch"
+            },
+            {
+                "result": "Correct",
+                "answers": "Ja",
+                "question": "Wochenendarbeit"
+            },
+            {
+                "result": "Correct",
+                "answers": "test",
+                "question": "Ihre Verfügbarkeit?"
+            },
+            {
+                "result": "Correct",
+                "answers": "Morgens 8:00 - 12:00 Uhr",
+                "question": "Kontaktzeit"
+            }
+        ],
+        "CreatedAt": "2025-05-05T13:40:07.558845Z",
+        "UpdatedAt": "2025-05-05T13:40:07.558845Z"
+    },
+    {
+        "ID": 61543,
+        "Name": "Felo Meier",
+        "Email": "felix.meier@example.com",
+        "Phone": "+4915667890125",
+        "PostalCode": "01067",
+        "IsTalent": true,
+        "IsHired": false,
+        "Success": false,
+        "FunnelID": "2",
+        "FormInfo": [
+            {
+                "result": "Incorrect",
+                "answers": "B",
+                "question": "Führerschein"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Minijob",
+                "question": "Arbeitsmodell"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Tieflader",
+                "question": "Fahrzeugtyp"
+            },
+            {
+                "result": "Correct",
+                "answers": "Mischverkehr",
+                "question": "Verkehrsart"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "FQN"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Nein",
+                "question": "ADR"
+            },
+            {
+                "result": "Correct",
+                "answers": "Grundlegend",
+                "question": "Deutsch"
+            },
+            {
+                "result": "Incorrect",
+                "answers": "Fluent",
                 "question": "Englisch"
             },
             {
