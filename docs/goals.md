@@ -39,9 +39,9 @@ ddf: driver discover frontend ui
 
 
 ### work breakdown: ddf
-- [ ] implement basic Ui for viewing applicants
+- [x] implement basic Ui for viewing applicants
 - [ ] implement filters UI
-- [ ] integrate with get-applicants API to view
+- [x] integrate with get-applicants API to view
 - [ ] connect with filters from ui
-- [ ] implement contact-one button
+- [x] implement contact-one button + integrate api & toast
 - [ ] 

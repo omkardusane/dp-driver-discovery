@@ -6,12 +6,12 @@ function App() {
   return (
     <>
       <div className="h-24 mt-1 w-full bg-gray-200 flex flex-col p-4 rounded  mx-auto">
-        <h1 className="ml-4 mt-4 text-3xl font-bold text-blue-700 mb-6">Driver Discovery App </h1>
+        <h1 className="ml-2 mt-4 text-3xl font-bold text-blue-400 mb-6 font-mono">Driver Discovery App </h1>
       </div>
       <div className="flex h-screen">
-        <div className="w-3/20 bg-gray-100 p-4">
+        <div className="w-3/20 bg-gray-100 p-4 font-mono">
           <h1 className="text-2xl font-bold mb-4 text-gray-300">Menu</h1>
-          <ul className=' text-gray-400'>
+          <ul className=' text-gray-400 '>
             <li> <a href="/"> Home </a>  </li>
             <li> <a href="/applicants"> Applicants </a> </li>
             <li> <a href="/"> Jobs </a> </li>
