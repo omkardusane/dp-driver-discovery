@@ -38,6 +38,8 @@ in Frontend:
 - filters can in future be made to support multiple choices
 - in the UI of list, we can show the filters that are applied or just inform user that there are some filters at play here
 - a refrest button in the applicants list
+- we can think of using ts here if complexity is expected
+- each component can have its own directory with hooks, types, styles and composition, helpers in separate files
 
 
 General
