@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { fetchDataAndFilterSvc } = require('./fetchDataAndFilterSvc');
+const fetchDataAndFilterSvc = require('./fetchDataAndFilterSvc');
 const { validationsDe, FormMappers, validationsEn } = require('./constants');
 const { validateAndGet } = require('./validators');
 
@@ -33,14 +33,15 @@ router.get('/', async (req, res) => {
             errors: filterErrors
         })
     }
-    const offset = parseInt(req.query.offset, 10) || 0;
-    const limit = parseInt(req.query.limit, 10) || 10;
-    const pagination = { offset, limit };
+    // const offset = parseInt(req.query.offset, 10) || 0;
+    // const limit = parseInt(req.query.limit, 10) || 10;
+    // const pagination = { offset, limit };
     console.log("filters", filters);
     try {
-        let data = await fetchDataAndFilterSvc(filters, pagination);
+        let data = await fetchDataAndFilterSvc(filters);
         return res.status(200).json(data)
     } catch (error) {
+        console.error(error)
         res.status(500).json({
             ok: false,
             message: 'Some error while fetching data from CA-Server, please contact the service provider.',
@@ -69,7 +70,10 @@ router.post('/:id/contact', (req, res) => {
     });
 });
 
-/* Helper route for providing choices in filters */
+/* 
+    route: applicants/filter-options    
+    Helper route for providing choices in filters 
+*/
 router.get('/filter-options', (req, res) => {
     res.status(200).json({
         enOptions: validationsEn,

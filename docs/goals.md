@@ -34,7 +34,7 @@ ddf: driver discover frontend ui
 - [x] add test case for validation of get applicants
 - [x] integrate with mock api for applicants from CA
 - [x] implement filters over the response of ca-applicants data
-- [ ] add test case for the filtering logic
+- [x] add test case for the filtering logic
 - [ ] maybe implement pagination support
 
 

@@ -12,7 +12,13 @@ npm install
 npm run dev
 ```
 
+for test:
+```
+npm run test
+```
+
 for production
+create new envfile production.env
 ```
 npm start
 ```

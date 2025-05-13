@@ -1,6 +1,6 @@
 const { FormMappers } = require('./constants')
 
-const formatApplicantProfiles = (rawProfile) => {
+const formatApplicantProfile = (rawProfile) => {
     let profile = {
         id: rawProfile.ID,
         name: rawProfile.Name,
@@ -32,4 +32,4 @@ function extractField(array, field) {
     return null
 }
 
-module.exports = { formatApplicantProfiles };
+module.exports = { formatApplicantProfile };
