@@ -32,10 +32,12 @@ npm run dev
 ```
 for production
 ```
-// tba
+npm run build
 ```
 
-
+### to just try:
+- build the frontend with ``npm run build`` in      `./frontend`
+- serve the backend in dev or prod mode with appropriate env files
 
 ## Docs
 

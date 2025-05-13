@@ -10,8 +10,8 @@ ddf: driver discover frontend ui
 ## Functional requirements
 
 1. Drivers list API @dds, 
- - request can take 2 filter params, location & qualification(drivers-license-codes) and languages english, deutsche
- - the filters are combinable
+ - request can take many filter params like drivers-license-codes and languages english, deutsche
+ - the filters are combinable with eachother
  - in future we may add more params
  - it should contact @ca & fetch the raw list of applicants on the go
  - respond with a filtered list using the filters specified in the response
@@ -40,8 +40,8 @@ ddf: driver discover frontend ui
 
 ### work breakdown: ddf
 - [x] implement basic Ui for viewing applicants
-- [ ] implement filters UI
+- [x] implement filters UI
 - [x] integrate with get-applicants API to view
-- [ ] connect with filters from ui
+- [x] connect with filters from ui
 - [x] implement contact-one button + integrate api & toast
 - [ ] 

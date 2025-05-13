@@ -12,9 +12,10 @@ module.exports = () => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
-    app.use('/applicants', applicantsModule)
     // serve the frontend
-    app.use('/ui', express.static('../frontend/dist'));
+    app.use('/', express.static('../frontend/dist'));
+    // api
+    app.use('/applicants', applicantsModule)
     app.listen(port, () => {
         console.log(`Express server listening on port ${port}`);
     });
