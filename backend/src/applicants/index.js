@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const fetchDataAndFilterSvc = require('./fetchDataAndFilterSvc');
+const { fetchDataAndFilterSvc } = require('./fetchDataAndFilterSvc');
 const { validationsDe, FormMappers, validationsEn } = require('./constants');
 const { validateAndGet } = require('./validators');
 
@@ -37,9 +37,17 @@ router.get('/', async (req, res) => {
     const limit = parseInt(req.query.limit, 10) || 10;
     const pagination = { offset, limit };
     console.log("filters", filters);
-    let data = await fetchDataAndFilterSvc(filters, pagination);
+    try {
+        let data = await fetchDataAndFilterSvc(filters, pagination);
+        return res.status(200).json(data)
+    } catch (error) {
+        res.status(500).json({
+            ok: false,
+            message: 'Some error while fetching data from CA-Server, please contact the service provider.',
+            error: 'ERR-1101'
+        })
+    }
     // res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(data)
 });
 
 /* 

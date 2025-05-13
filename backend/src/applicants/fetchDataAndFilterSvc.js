@@ -3,27 +3,21 @@ const axios = require('axios');
 const { formatApplicantProfiles } = require('./utils');
 
 const CA_URL = process.env?.CA_URL?.trim();
-module.exports = async function (filters, { offset, limit }) {
+const fetchDataAndFilterSvc = async function (filters, { offset, limit }) {
     let response = [];
-    if (!CA_URL) {
-        throw "CA_URL not present in env, ensure .env file has CA_URL"
-    }
     try {
-        response = await axios.get(CA_URL)
-            .then(resp => {
-                // console.log("Response from CA_URL", resp.data.length)
-                if (!resp.data) throw "Response does not have readable data"
-                return resp.data.concat(mockData)
-                    .map(formatApplicantProfiles)
-                    .filter(profile => {
-                        for (let key in filters) {
-                            if (profile.attributes[key] !== filters[key]) {
-                                return false;
-                            }
-                        }
-                        return true;
-                    });
-            })
+        let data = await fetchDataFromCA();
+        response = data
+            .concat(mockData) // appending mock data for extending test-case ability to filter
+            .map(formatApplicantProfiles)
+            .filter(profile => {
+                for (let key in filters) {
+                    if (profile.attributes[key] !== filters[key]) {
+                        return false;
+                    }
+                }
+                return true;
+            });
     } catch (err) {
         console.error("Error fetching data from CA_URL", err);
         throw err;
@@ -31,6 +25,16 @@ module.exports = async function (filters, { offset, limit }) {
     return response;
 };
 
+function fetchDataFromCA() {
+    if (!CA_URL) {
+        throw "CA_URL not present in env, ensure .env file has CA_URL"
+    }
+    return axios.get(CA_URL).then(resp => {
+        // console.log("Response from CA_URL", resp.data.length)
+        if (!resp.data) throw "Response does not have readable data"
+        return resp.data
+    })
+}
 
 
 /*
@@ -42,3 +46,8 @@ todo:
  - [ ] maybe impl pagination offset
  - return the list
 */
+
+module.exports = {
+    fetchDataFromCA,
+    fetchDataAndFilterSvc
+}
