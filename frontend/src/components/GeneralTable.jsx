@@ -22,7 +22,7 @@ export default function GeneralTable({ headers, data, onAction, actionLabel = "C
                         <td key={header.key} className="px-4 py-2 border-b border-gray-200"> {item[header.key]}</td>
                     ))}
                     {onAction && (
-                        <td className="px-4 py-2 border-b border-gray-200"> <GeneralButton text={actionLabel} onclick={() => onAction(item)} /> </td>
+                        <td className="px-4 py-2 border-b border-gray-200"> <GeneralButton text={actionLabel} onClick={() => onAction(item)} /> </td>
                     )}
                 </tr>
             ))}

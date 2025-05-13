@@ -2,10 +2,11 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:3000';
 
-export const fetchApplicants = async (page = 1) => {
+export const fetchApplicants = async (params) => {
     try {
         const response = await axios.get(`${API_BASE_URL}/applicants`, {
             params: {
+                ...params,
                 // deu: 'Grundlegend',
                 // eng: 'Keine Englischkenntnisse',
 
@@ -36,5 +37,17 @@ export const contactOneApplicant = async (applicantId) => {
     } catch (error) {
         console.error('Error contacting applicant:', error);
         return false
+    }
+}
+
+
+export const fetchFilterChoices = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/applicants/filter-options`);
+        // console.log('Filter options fetched ', response)
+        return response?.data;
+    } catch (error) {
+        console.error('Error in fetching filter-options:', error);
+        return
     }
 }

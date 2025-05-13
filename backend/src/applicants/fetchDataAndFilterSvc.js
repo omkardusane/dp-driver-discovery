@@ -7,7 +7,7 @@ module.exports = async function (filters) {
     try {
         let data = await fetchDataFromCA();
         response = data
-            // .concat(mockData) // appending mock data for extending test-case ability to filter
+            .concat(mockData) // appending mock data for extending test-case ability to filter
             .map(formatApplicantProfile)
             .filter(profile => {
                 for (let key in filters) {
