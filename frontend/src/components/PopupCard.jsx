@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useImperativeHandle, forwardRef } from 'react';
 import GeneralButton from './GeneralButton'; // Assuming you might want to use your GeneralButton
 
-const PopupCard = ({ buttonLabel, cardTitle, children, onOpen, onClose }) => {
+// const PopupCard = forwardRef({ buttonLabel, cardTitle, children, onOpen, onClose }) => {
+const PopupCard = forwardRef(({ buttonLabel, cardTitle, children, onOpen, onClose }, ref) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openPopup = () => {
@@ -13,6 +14,13 @@ const PopupCard = ({ buttonLabel, cardTitle, children, onOpen, onClose }) => {
         setIsOpen(false);
         if (onClose) onClose();
     };
+
+    useImperativeHandle(ref, () => ({
+        close: () => {
+            closePopup();
+        }
+    }));
+    // children.applyFilters
 
     return (
         <>
@@ -40,6 +48,6 @@ const PopupCard = ({ buttonLabel, cardTitle, children, onOpen, onClose }) => {
             )}
         </>
     );
-};
+});
 
 export default PopupCard;

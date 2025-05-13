@@ -8,9 +8,9 @@ export default () => {
 
     const [applicants, setApplicants] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [filterValues, setFilterValues] = useState({});
     const [filterChoices, setFilterChoices] = useState({});
     const [toastMessage, setToastMessage] = useState(null);
-    // let filterChoices = {}
 
     const headers = [
         { key: 'name', label: 'Applicant Name' },
@@ -56,7 +56,7 @@ export default () => {
 
     const onApplyFilter = (intentedFilters) => {
         console.log('intentedFilters ', intentedFilters);
-
+        setFilterValues(intentedFilters);
         (async () => {
             try {
                 const data = await fetchApplicants(intentedFilters);
@@ -75,7 +75,7 @@ export default () => {
                     <span className='text-gray-400 text-xl'>
                         ({loading ? "Loading..." : applicants.length})</span>
                 </h2>
-                <Filters headers={headers} filterChoices={filterChoices} onApplyFilter={onApplyFilter} />
+                <Filters initialFilterValues={filterValues} headers={headers} filterChoices={filterChoices} onApplyFilter={onApplyFilter} />
             </div>
             {!loading && <div className="overflow-x-auto  ">
                 <GeneralTable headers={headers} data={applicants} onAction={handleAction} actionLabel="Contact" />
